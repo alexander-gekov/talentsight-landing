@@ -7,6 +7,10 @@ module.exports = {
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
+      // extend colors
+      colors: {
+        'brand-green': '#4C9A2A'
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],

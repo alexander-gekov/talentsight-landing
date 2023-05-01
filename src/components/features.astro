@@ -4,39 +4,39 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Get Relevant Results",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      "Find Candidates that are relevant to a specific job offering.",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Multiple Sources",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      "Gather information about candidates from LinkedIn, GitHub, Medium or other sites where the candidate is present.",
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "On-Demand Components",
+    title: "User-friendly UI",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      "Modern and intuitive UI to help with faster screening of candidates.",
     icon: "bx:bxs-data",
   },
   {
-    title: "Broad Integration",
+    title: "Save for later",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      "Save candidates into projects, so that you can go back to them later.",
     icon: "bx:bxs-bot",
   },
   {
-    title: "SEO Enabled",
+    title: "Always in sync",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      "Sync candidates with your other platforms. Import or Export lists of candidates.",
     icon: "bx:bxs-file-find",
   },
   {
-    title: "Community",
+    title: "Candidate Outreach",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+      "Reach out to candidates directly through the platform",
     icon: "bx:bxs-user",
   },
 ];
@@ -44,11 +44,10 @@ const features = [
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Say goodbye to manually searching through resumes and profiles
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    TalentSight is designed to help you find the best candidates quickly and efficiently, enabling you to fill your open positions with the right talent.
   </p>
 </div>
 
@@ -56,7 +55,7 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-brand-green rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
