@@ -10,7 +10,7 @@ const env = loadEnv("", process.cwd(), 'STORYBLOK')
 
 
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site: "https://talentsight.netlify.app",
   integrations: [
     tailwind(),
     image({
@@ -28,7 +28,11 @@ export default defineConfig({
         hero: 'storyblok/Hero',
         features: 'storyblok/Features',
         logos: 'storyblok/Logos',
-        cta: 'storyblok/Cta'
+        cta: 'storyblok/Cta',
+        section_head: 'storyblok/SectionHead',
+        heading: 'storyblok/Heading',
+        gallery: 'storyblok/Gallery',
+        member: 'storyblok/Member'
       },
     }),
   ],

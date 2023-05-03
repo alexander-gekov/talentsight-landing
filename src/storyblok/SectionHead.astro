@@ -1,0 +1,11 @@
+---
+import Sectionhead from "@components/sectionhead.astro";
+import { storyblokEditable } from '@storyblok/astro'
+ 
+const { blok } = Astro.props
+---
+
+<Sectionhead {...storyblokEditable(blok)}>
+  <Fragment slot="title">{blok.title}</Fragment>
+  <Fragment slot="desc">{blok.description}</Fragment>
+</Sectionhead>

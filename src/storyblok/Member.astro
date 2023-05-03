@@ -1,0 +1,32 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { storyblokEditable } from '@storyblok/astro'
+ 
+const { blok } = Astro.props
+---
+
+<div class="group" {...storyblokEditable(blok)}>
+  <div class="w-full aspect-square">
+    <Picture
+      src={blok.avatar_url}
+      alt={blok.avatar_alt}
+      sizes="(max-width: 800px) 100vw, 400px"
+      widths={[200, 400]}
+      aspectRatio="1:1"
+      background="#ffffff"
+      fit="cover"
+      position="center"
+      loading="lazy"
+      class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+    />
+  </div>
+
+  <div class="mt-4 text-center">
+    <h2 class="text-lg text-gray-800">
+      {blok.name}
+    </h2>
+    <h3 class="text-sm text-slate-500">
+      {blok.title}
+    </h3>
+  </div>
+</div>
