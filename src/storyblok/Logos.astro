@@ -1,0 +1,18 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+import { storyblokEditable } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+ 
+const { blok } = Astro.props
+---
+
+<div class="mt-24">
+  <h2 class="text-center text-slate-500">Integrations with:</h2>
+  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+    {blok.icons.map(icon => (
+      <Icon class="h-8 md:h-12" name={icon.name} />
+    ))}
+  </div>
+</div>

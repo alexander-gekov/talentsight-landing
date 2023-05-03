@@ -1,4 +1,6 @@
 ---
+import { useStoryblokApi } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
@@ -6,13 +8,21 @@ import Footer from "@components/footer.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get('cdn/stories/home', {
+  version: 'draft',
+})
+
+const story = data.story
 ---
 
 <Layout title="">
   <Container>
-    <Hero />
+    <!-- <Hero />
     <Features />
     <Logos />
-    <Cta />
+    <Cta /> -->
+    <StoryblokComponent blok={story.content} />
   </Container>
 </Layout>
