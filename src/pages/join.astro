@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+import Signupform from "@components/signupform.astro";
+---
+
+<Layout title="Join Waitlist">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Join Us</Fragment>
+      <Fragment slot="desc">
+        Sign up and be notified about TalentSight's launch.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-xl mt-16">
+      <div>
+        <Signupform />
+      </div>
+    </div>
+  </Container>
+</Layout>

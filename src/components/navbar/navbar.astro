@@ -3,17 +3,13 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import Modal from "@components/modal.astro";
+import Signupform from "@components/signupform.astro";
 
 const menuitems = [
   {
     title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
+    path: "/#features",
   },
   {
     title: "Pricing",
@@ -24,12 +20,12 @@ const menuitems = [
     path: "/about",
   },
   {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
     title: "Contact",
     path: "/contact",
+  },
+  {
+    title: "Join",
+    path: "/join",
   },
 ];
 ---
@@ -74,7 +70,7 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Join waitlist</Link>
+          <Link href="/join" style="muted" block size="md">Join waitlist</Link>
           <!-- <Link href="#" size="md" block>Sign up</Link> -->
         </div>
       </MenuItems>
@@ -82,7 +78,9 @@ const menuitems = [
     <div>
       <div class="hidden lg:flex items-center gap-4">
         <!-- <a href="#">Join Waitlist</a> -->
-        <Link class="bg-brand-green hover:bg-green-700" href="#" size="md">Join Waitlist</Link>
+        <Link class="bg-brand-green hover:bg-green-700" href="/join" size="md">
+          Join Waitlist
+        </Link>
       </div>
     </div>
   </header>

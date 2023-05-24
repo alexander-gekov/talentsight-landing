@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Pricing from "@components/pricing.astro";
+import Link from "@components/ui/link.astro";
 
 const pricing = [
   {
@@ -68,13 +69,22 @@ const pricing = [
   <Container>
     <Sectionhead>
       <Fragment slot="title">Pricing</Fragment>
-      <Fragment slot="desc"
-        >Simple & Predictable pricing. No Surprises.</Fragment
-      >
+      <Fragment slot="desc">Coming Soon!</Fragment>
     </Sectionhead>
-
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
+    <Fragment slot="desc">
+      Please use the contact form to reach us about more detailed information
+      regarding our pricing.
+    </Fragment>
+    <div>
+      <div class="hidden lg:flex justify-center mt-10 items-center gap-4">
+        <!-- <a href="#">Join Waitlist</a> -->
+        <Link class="bg-brand-black hover:bg-gray-900" href="/join" size="md">
+          Join Waitlist
+        </Link>
+      </div>
     </div>
+    <!-- <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div> -->
   </Container>
 </Layout>
