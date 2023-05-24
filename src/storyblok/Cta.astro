@@ -1,10 +1,10 @@
 ---
 import Link from "@components/ui/link.astro";
 
-import { storyblokEditable } from '@storyblok/astro'
+import { storyblokEditable } from "@storyblok/astro";
 import { Icon } from "astro-icon";
- 
- const { blok } = Astro.props
+
+const { blok } = Astro.props;
 ---
 
 <div
@@ -17,6 +17,8 @@ import { Icon } from "astro-icon";
   </p>
 
   <div class="flex mt-5">
-    <Link href={blok.cta_button_link.url} style="inverted">{blok.cta_button_text}</Link>
+    <Link href={blok.cta_button_link} style="inverted">
+      {blok.cta_button_text}
+    </Link>
   </div>
 </div>

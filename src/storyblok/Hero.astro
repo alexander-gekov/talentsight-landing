@@ -4,19 +4,20 @@ import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 
-import { storyblokEditable } from '@storyblok/astro'
-import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
- 
-const { blok } = Astro.props
+import { storyblokEditable } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+const { blok } = Astro.props;
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24" {...storyblokEditable(blok)}>
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24"
+  {...storyblokEditable(blok)}>
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
       src={blok.heroImage ?? heroImage}
       alt="Find the perfect candidate faster!"
-      widths={[200, 400, 600,800]}
+      widths={[200, 400, 600, 800]}
       aspectRatio="4:3"
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
@@ -34,14 +35,14 @@ const { blok } = Astro.props
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
         href="#"
-        href={blok.cta_button_link.url}
-        class={'flex gap-1 items-center justify-center hover:bg-green-700 bg-brand-green'}>
+        href={blok.cta_button_link}
+        class={"flex gap-1 items-center justify-center hover:bg-green-700 bg-brand-green"}>
         {blok.cta_button_text}
-      </Link> 
+      </Link>
       <Link
         size="lg"
         style="outline"
-        href={blok.secondary_button_link.url}
+        href={blok.secondary_button_link}
         class="flex gap-1 items-center justify-center">
         {blok.secondary_button_text}
       </Link>
