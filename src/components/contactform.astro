@@ -5,16 +5,16 @@ import Button from "./ui/button.astro";
 <!-- To make this contact form work, create your free access key from https://web3forms.com/
      Then you will get all form submissions in your email inbox. -->
 <form
-  action="https://api.web3forms.com/submit"
-  method="POST"
-  id="form"
+  id="contact_form"
+  method="post"
   class="needs-validation"
-  novalidate>
-  <input
+  novalidate
+  netlify>
+  <!-- <input
     type="hidden"
     name="access_key"
     value="17bf2abc-f478-4501-8ea6-ce7b321412aa"
-  />
+  /> -->
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
