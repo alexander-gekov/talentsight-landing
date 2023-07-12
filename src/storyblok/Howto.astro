@@ -1,0 +1,37 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/hero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+
+import { storyblokEditable } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+const { blok } = Astro.props;
+const reversed = blok.reversed;
+---
+
+<div>
+  <div
+    class:list={[
+      "flex flex-row w-full justify-between px-16 pt-8 pb-8 md:pt-12 md:pb-12",
+      { "flex-row-reverse": reversed },
+    ]}
+    {...storyblokEditable(blok)}>
+    <div class:list={["py-6  hidden md:block w-1/2"]}>
+      <img
+        width={blok.imgWidth}
+        height={blok.imgHeight}
+        src={blok.image}
+        alt="feature"
+      />
+    </div>
+    <div class="py-6 w-1/2 flex flex-col items-center justify-center">
+      <h1
+        class="text-xl lg:text-2xl xl:text-3xl max-w-xl font-bold lg:tracking-tight xl:tracking-tighter">
+        {blok.headline}
+      </h1>
+      <p class="text-lg mt-4 text-slate-600 max-w-xl">{blok.description}</p>
+    </div>
+  </div>
+</div>
